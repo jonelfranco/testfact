@@ -1,0 +1,101 @@
+<!--
+/***********************************************************************
+Archivo: producto.htm
+Finalidad:  Contiene el maquetado de la aplicación web y la estructura de la interfaz de usuario
+Autor: JONEL FRANCO
+fecha: 2024-11-07
+*************************************************************************/
+//-->
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/principal.css" />
+
+        <title>Producto</title>
+    </head>
+    
+    <body>
+
+<div class="contenedor">
+
+<form id="frmProducto" name="frmProducto">
+
+    <div class="fila">
+        <div class="col col-12 centrado">
+            <h1>Formulario de Producto</h1>
+        </div>
+    </div>
+
+    <div class="fila">
+        <div class="col col-6">
+            <div class="div-control">C&oacute;digo</div>
+            <div class="div-control"><input type="text" id="txtCodigo" name="txtCodigo" class="control"></div>
+        </div>
+        <div class="col col-6">
+            <div class="div-control">Nombre</div>
+            <div class="div-control"><input type="text" id="txtNombre" name="txtNombre" class="control"></div>
+        </div>    
+    </div>
+
+    <div class="fila">
+        <div class="col col-6">
+            <div class="div-control">Bodega</div>
+            <div class="div-control"><select id="ddlBodega" name="ddlBodega" class="control" onchange="javascript:cargarSucursal($(this).val());"></select></div>
+        </div>
+        <div class="col col-6">
+            <div class="div-control">Sucursal</div>
+            <div class="div-control"><select id="ddlSucursal" name="ddlSucursal" class="control"></select></div>
+        </div>    
+    </div>
+
+    <div class="fila">
+        <div class="col col-6">
+            <div class="div-control">Moneda</div>
+            <div class="div-control"><select id="ddlMoneda" name="ddlMoneda" class="control"></select></div>
+        </div>
+        <div class="col col-6">
+            <div class="div-control">Precio</div>
+            <div class="div-control"><input type="text" id="txtPrecio" name="txtPrecio" maxlength="10" class="control"></div>
+        </div>    
+    </div>
+
+    <div class="fila">
+        <div class="col col-12">
+            <div class="div-control">Material del Producto</div>
+            <div class="div-control">
+                <input type="checkbox" id="chkMaterial" name="chkMaterial[]" value="Plastico">Pl&aacute;stico
+                <input type="checkbox" id="chkMaterial" name="chkMaterial[]" value="Metal">Metal
+                <input type="checkbox" id="chkMaterial" name="chkMaterial[]" value="Madera">Madera
+                <input type="checkbox" id="chkMaterial" name="chkMaterial[]" value="Vidrio">Vidrio
+                <input type="checkbox" id="chkMaterial" name="chkMaterial[]" value="Textil">Textil
+            </div>
+        </div>
+    </div>
+
+    <div class="fila">
+        <div class="col col-12">
+            <div class="div-control">Descripci&oacute;n</div>
+            <div class="div-control"><textarea id="txtDescripcion" name="txtDescripcion" rows="4" class="control" style="width: 95%;"></textarea></div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="fila">
+        <div class="col col-12 centrado">
+            <div class="div-control"><button type="button" class="boton" onclick="javascript:guardarProducto();">Guardar Producto</button></div>
+        </div>
+    </div>
+
+</div>
+
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="js/validacion.js"></script>
+<script src="js/principal.js"></script>
+
+    </body>
+</html>

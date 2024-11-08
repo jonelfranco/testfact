@@ -1,0 +1,37 @@
+
+Plataformas utilizadas
+======================
+PHP Versión: 8.0
+Base de datos: Microsoft SQL Server 2019
+
+
+Pasos para instalar el proyecto
+===============================
+
+I. Base de datos (SQL SERVER)
+	1. Ubicar nuestra carpeta de trabajo "testfact"
+	2. Ubicar los archivos en el directorio "testfact\sql\"
+	3. Abrir SQL SERVER y ejecutar los scripts en el siguiente orden:
+		01_ESTRUCTURA.sql
+		02_DATA_INICIAL.sql
+		
+II. WebSite (PHP)
+	1. Ubicar nuestra carpeta de trabajo "testfact"
+	2. Colocar la carpeta completa "testfact" dentro de la carpeta "htdocs" localizada en el directorio raíz del PHP
+	3. Con el bloc de notas abrir el archivo "testfact\servicios\producto.php"
+	4. En las líneas 18 y 19 reemplazar las claves de conexión a la base de datos con los valores reales
+		[NOMBRE_SERVIDOR] -> NOMBRE DEL SERVIDOR SQL
+		[PUERTO_SEVIDOR] -> PUERTO DE CONEXIÓN DEL SERVIDOR, POR DEFECTO ES EL 1433
+		[USUARIO_BD] -> USUARIO DE SQL CON ACCESO A LA BASE DE DATOS "TEST"
+		[PASSWORD_BD] -> CONTRASEÑA DEL USUARIO
+	
+III. Ejecutar la aplicación
+	1. En el navegador se debe invocar a la url http://[SERVIDOR]/testfact/producto.htm por ejemplo http://localhost:8012/testfact/producto.htm
+	
+
+
+Documentación Adicional
+===================================================
+
+Controladores de Microsoft para PHP para SQL Server (Documentación Oficial de Microsoft)
+https://learn.microsoft.com/es-es/sql/connect/php/microsoft-php-driver-for-sql-server?view=sql-server-ver16

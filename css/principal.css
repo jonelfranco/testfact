@@ -1,0 +1,84 @@
+/************************************************************************
+Archivo: principal.css
+Finalidad: Define los estilos y la apariencia visual de la aplicación web, incluyendo colores, tipografías y disposición de elementos
+Autor: JONEL FRANCO
+fecha: 2024-11-07
+*************************************************************************/
+
+/* Estilos generales */
+body{
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.contenedor {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #f2f2f2 !important;
+  max-width: 70%;
+
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.centrado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fila {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.col {
+  padding-bottom: 15px;
+} 
+
+
+/* Vista Web */ 
+.col-6 {width: 50%;} 
+.col-12 {width: 100%;}
+
+  /* Vista Móviles */ 
+@media only screen and (max-width: 768px) { 
+  [class*="col-"] { 
+  width: 100%; 
+  } 
+
+  .contenedor {
+    max-width: unset !important;
+  
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .control {
+    width: 100% !important;
+  }
+
+} 
+
+/* Estilos de formulario */
+.control {
+  text-align: left;
+  padding: 5px;
+  
+  border-radius: 5px;
+  width: 90%;
+}
+
+.boton {
+  background-color: #1aab8a;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+.div-control {
+  text-align: left;
+  padding-bottom: 7px;
+}
